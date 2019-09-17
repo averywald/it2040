@@ -1,0 +1,11 @@
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/bin/Debug/netcoreapp2.1/URLEncoder.deps.json
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/bin/Debug/netcoreapp2.1/URLEncoder.runtimeconfig.json
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/bin/Debug/netcoreapp2.1/URLEncoder.runtimeconfig.dev.json
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/bin/Debug/netcoreapp2.1/URLEncoder.dll
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/bin/Debug/netcoreapp2.1/URLEncoder.pdb
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/Debug/netcoreapp2.1/URLEncoder.csprojAssemblyReference.cache
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/Debug/netcoreapp2.1/URLEncoder.csproj.CoreCompileInputs.cache
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/Debug/netcoreapp2.1/URLEncoder.AssemblyInfoInputs.cache
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/Debug/netcoreapp2.1/URLEncoder.AssemblyInfo.cs
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/Debug/netcoreapp2.1/URLEncoder.dll
+/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/Debug/netcoreapp2.1/URLEncoder.pdb

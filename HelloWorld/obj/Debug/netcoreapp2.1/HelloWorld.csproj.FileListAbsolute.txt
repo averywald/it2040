@@ -1,0 +1,11 @@
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/bin/Debug/netcoreapp2.1/HelloWorld.deps.json
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/bin/Debug/netcoreapp2.1/HelloWorld.runtimeconfig.json
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/bin/Debug/netcoreapp2.1/HelloWorld.runtimeconfig.dev.json
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/bin/Debug/netcoreapp2.1/HelloWorld.dll
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/bin/Debug/netcoreapp2.1/HelloWorld.pdb
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/obj/Debug/netcoreapp2.1/HelloWorld.csprojAssemblyReference.cache
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/obj/Debug/netcoreapp2.1/HelloWorld.csproj.CoreCompileInputs.cache
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/obj/Debug/netcoreapp2.1/HelloWorld.AssemblyInfoInputs.cache
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/obj/Debug/netcoreapp2.1/HelloWorld.AssemblyInfo.cs
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/obj/Debug/netcoreapp2.1/HelloWorld.dll
+/Users/averywald/Desktop/code/class/it2040/HelloWorld/obj/Debug/netcoreapp2.1/HelloWorld.pdb

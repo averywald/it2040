@@ -1,0 +1,11 @@
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/obj/Debug/netcoreapp2.1/CsharpBasics.csprojAssemblyReference.cache
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/obj/Debug/netcoreapp2.1/CsharpBasics.csproj.CoreCompileInputs.cache
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/obj/Debug/netcoreapp2.1/CsharpBasics.AssemblyInfoInputs.cache
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/obj/Debug/netcoreapp2.1/CsharpBasics.AssemblyInfo.cs
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/bin/Debug/netcoreapp2.1/CsharpBasics.deps.json
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/bin/Debug/netcoreapp2.1/CsharpBasics.runtimeconfig.json
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/bin/Debug/netcoreapp2.1/CsharpBasics.runtimeconfig.dev.json
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/bin/Debug/netcoreapp2.1/CsharpBasics.dll
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/bin/Debug/netcoreapp2.1/CsharpBasics.pdb
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/obj/Debug/netcoreapp2.1/CsharpBasics.dll
+/Users/averywald/Desktop/code/class/it2040/CsharpBasics/obj/Debug/netcoreapp2.1/CsharpBasics.pdb

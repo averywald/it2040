@@ -1,0 +1,11 @@
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/bin/Debug/netcoreapp2.1/DocumentMerger.deps.json
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/bin/Debug/netcoreapp2.1/DocumentMerger.runtimeconfig.json
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/bin/Debug/netcoreapp2.1/DocumentMerger.runtimeconfig.dev.json
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/bin/Debug/netcoreapp2.1/DocumentMerger.dll
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/bin/Debug/netcoreapp2.1/DocumentMerger.pdb
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/obj/Debug/netcoreapp2.1/DocumentMerger.csprojAssemblyReference.cache
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/obj/Debug/netcoreapp2.1/DocumentMerger.csproj.CoreCompileInputs.cache
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/obj/Debug/netcoreapp2.1/DocumentMerger.AssemblyInfoInputs.cache
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/obj/Debug/netcoreapp2.1/DocumentMerger.AssemblyInfo.cs
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/obj/Debug/netcoreapp2.1/DocumentMerger.dll
+/Users/averywald/Desktop/code/class/it2040/DocumentMerger/obj/Debug/netcoreapp2.1/DocumentMerger.pdb

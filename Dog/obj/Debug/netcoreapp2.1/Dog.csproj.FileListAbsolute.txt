@@ -1,0 +1,11 @@
+/Users/averywald/Desktop/code/class/it2040/Dog/bin/Debug/netcoreapp2.1/Dog.deps.json
+/Users/averywald/Desktop/code/class/it2040/Dog/bin/Debug/netcoreapp2.1/Dog.runtimeconfig.json
+/Users/averywald/Desktop/code/class/it2040/Dog/bin/Debug/netcoreapp2.1/Dog.runtimeconfig.dev.json
+/Users/averywald/Desktop/code/class/it2040/Dog/bin/Debug/netcoreapp2.1/Dog.dll
+/Users/averywald/Desktop/code/class/it2040/Dog/bin/Debug/netcoreapp2.1/Dog.pdb
+/Users/averywald/Desktop/code/class/it2040/Dog/obj/Debug/netcoreapp2.1/Dog.csprojAssemblyReference.cache
+/Users/averywald/Desktop/code/class/it2040/Dog/obj/Debug/netcoreapp2.1/Dog.csproj.CoreCompileInputs.cache
+/Users/averywald/Desktop/code/class/it2040/Dog/obj/Debug/netcoreapp2.1/Dog.AssemblyInfoInputs.cache
+/Users/averywald/Desktop/code/class/it2040/Dog/obj/Debug/netcoreapp2.1/Dog.AssemblyInfo.cs
+/Users/averywald/Desktop/code/class/it2040/Dog/obj/Debug/netcoreapp2.1/Dog.dll
+/Users/averywald/Desktop/code/class/it2040/Dog/obj/Debug/netcoreapp2.1/Dog.pdb

@@ -1,0 +1,11 @@
+/Users/averywald/Desktop/code/class/it2040/Document/bin/Debug/netcoreapp2.1/Document.deps.json
+/Users/averywald/Desktop/code/class/it2040/Document/bin/Debug/netcoreapp2.1/Document.runtimeconfig.json
+/Users/averywald/Desktop/code/class/it2040/Document/bin/Debug/netcoreapp2.1/Document.runtimeconfig.dev.json
+/Users/averywald/Desktop/code/class/it2040/Document/bin/Debug/netcoreapp2.1/Document.dll
+/Users/averywald/Desktop/code/class/it2040/Document/bin/Debug/netcoreapp2.1/Document.pdb
+/Users/averywald/Desktop/code/class/it2040/Document/obj/Debug/netcoreapp2.1/Document.csprojAssemblyReference.cache
+/Users/averywald/Desktop/code/class/it2040/Document/obj/Debug/netcoreapp2.1/Document.csproj.CoreCompileInputs.cache
+/Users/averywald/Desktop/code/class/it2040/Document/obj/Debug/netcoreapp2.1/Document.AssemblyInfoInputs.cache
+/Users/averywald/Desktop/code/class/it2040/Document/obj/Debug/netcoreapp2.1/Document.AssemblyInfo.cs
+/Users/averywald/Desktop/code/class/it2040/Document/obj/Debug/netcoreapp2.1/Document.dll
+/Users/averywald/Desktop/code/class/it2040/Document/obj/Debug/netcoreapp2.1/Document.pdb

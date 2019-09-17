@@ -1,0 +1,57 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/averywald/Desktop/code/class/it2040/URLEncoder/URLEncoder.csproj": {}
+  },
+  "projects": {
+    "/Users/averywald/Desktop/code/class/it2040/URLEncoder/URLEncoder.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/averywald/Desktop/code/class/it2040/URLEncoder/URLEncoder.csproj",
+        "projectName": "URLEncoder",
+        "projectPath": "/Users/averywald/Desktop/code/class/it2040/URLEncoder/URLEncoder.csproj",
+        "packagesPath": "/Users/averywald/.nuget/packages/",
+        "outputPath": "/Users/averywald/Desktop/code/class/it2040/URLEncoder/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/averywald/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
