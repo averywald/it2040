@@ -1,73 +1,56 @@
 ﻿using System;
-using System.IO;
-using System.Collections.Generic;
+using System.Collections;
+using System.Text.RegularExpressions;
+// using System.Linq;
 
 namespace DocumentMerger {
     class Program {
-
-        static string HandleInput() {
-
-            // string to hold user input
-            string input;
-
-            do {
-                // get user input
-                Console.Write("Specify a file to merge: ");
-                input = Console.ReadLine();
-            } while (String.IsNullOrEmpty(input));
-
-            // check if file exists
-            if (!File.Exists(Path.GetFullPath(input))) {
-                // print error message
-                Console.WriteLine("File '{0}' does not exist !!", input);
-                // recursion to redo the loop
-                input = HandleInput();
-            }
-            
-            return input;
-
+        static void Emphasize(string t, bool space = true) {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            if (space) Console.WriteLine("\n{0}\n", t);
+            else Console.WriteLine(t);
+            Console.ResetColor();
         }
-
-        static List<string> ReadFile(string f) {
-
-            // initialize list to dynamically add text lines to
-            List<string> fileList = new List<string>();
-            // create StreamReader to read specified file
-            StreamReader sr = new StreamReader(f);
-
-            try {
-                // read in first line
-                string line = sr.ReadLine();
-                // read in the rest of the file line by line
-                while (line != null) {
-                    // write line
-                    fileList.Add(line);
-                    // read next line
-                    line = sr.ReadLine();
-                }
-            } catch (Exception e) {
-                // print error occurence to the console
-                Console.WriteLine(e);
-            } finally {
-                // close StreamReader
-                if (sr != null) sr.Close();
-            }
-
-            // return list of file lines
-            return fileList;
-
-        }
-
         static void Main(string[] args) {
 
-            Console.WriteLine("\nDocument Merger\n");
-            
-            List<string> f = ReadFile(HandleInput());
+            Emphasize("Document Merger");
 
-            foreach (string line in f) {
-                Console.WriteLine(line);
+            // holds dynamic amount of Doc objects
+            ArrayList files = new ArrayList();
+
+            // loop to continuously add files to be merged
+            do {
+                // read in new file
+                Doc f = new Doc();
+                // add to list of files to be merged
+                files.Add(f);
+
+                // do something
+
+                // ask user if they want to merge another file
+                Console.Write("> Would you like to add another file? : ");
+            } while (Regex.IsMatch(Console.ReadLine(), @"^[Yy]"));
+
+            // holds all the file names
+            ArrayList names = new ArrayList();
+
+            // print each document for user review
+            Emphasize("Files to be merged:");
+            foreach (Doc f in files) {
+                // print all lines of file
+                f.PrintFile();
+                // add name to the arraylist
+                names.Add(f.GetName());
             }
 
+            // handle saving the newly merged file
+                // strip file extensions
+                // concat
+                // append .txt
+
+                // concat all files content
+                    // new class ???
+                // save new file to current dir
         }
     }
 }
