@@ -8,7 +8,7 @@ namespace DocumentMerger {
         static void Emphasize(string t, bool space = true) {
             Console.ForegroundColor = ConsoleColor.Yellow;
             if (space) Console.WriteLine("\n{0}\n", t);
-            else Console.WriteLine(t);
+            else Console.Write(t);
             Console.ResetColor();
         }
         static void Main(string[] args) {
@@ -28,29 +28,42 @@ namespace DocumentMerger {
                 // do something
 
                 // ask user if they want to merge another file
-                Console.Write("> Would you like to add another file? : ");
+                Emphasize("> Would you like to add another file? : ", false);
             } while (Regex.IsMatch(Console.ReadLine(), @"^[Yy]"));
 
-            // holds all the file names
-            ArrayList names = new ArrayList();
+            // default file name
+            string defName = "";
 
             // print each document for user review
             Emphasize("Files to be merged:");
             foreach (Doc f in files) {
                 // print all lines of file
                 f.PrintFile();
-                // add name to the arraylist
-                names.Add(f.GetName());
+                // add name to the string
+                defName += f.GetCleanName();
             }
 
-            // handle saving the newly merged file
-                // strip file extensions
-                // concat
-                // append .txt
-
-                // concat all files content
-                    // new class ???
-                // save new file to current dir
+            // append file extension to default file name
+            defName += ".txt";
+            // ask user for different name to save file
+            Emphasize("\nName your file? (default: " + defName + "): ", false);
+            string resp = Console.ReadLine();
+            
+            // concat all files content
+            if (resp == "") {
+                // write to default file name
+                Merger m = new Merger(defName, files);
+                m.Write();
+            } else {
+                // append .txt extension if not provided
+                if (!Regex.IsMatch(resp, @"\.(...)")) {
+                    resp += ".txt";
+                }
+                // write to given file name
+                Merger m = new Merger(resp, files);
+                m.Write();
+            }
+            
         }
     }
 }

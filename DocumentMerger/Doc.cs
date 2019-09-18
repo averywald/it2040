@@ -20,6 +20,11 @@ class Doc {
         return this.name;
     }
 
+    public string GetCleanName() {
+        return Char.ToUpper(this.name[0]) + 
+        this.name.Substring(1, this.name.LastIndexOf(".") - 1);
+    }
+
     public List<string> GetContent() {
         return this.content;
     }
@@ -59,7 +64,7 @@ class Doc {
 
     }
 
-    static List<string> ReadFile(string f) {
+    List<string> ReadFile(string f) {
 
         // initialize list to dynamically add text lines to
         List<string> fileList = new List<string>();
@@ -76,12 +81,10 @@ class Doc {
                 // read next line
                 line = sr.ReadLine();
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             // print error occurence to the console
             Console.WriteLine(e);
-        }
-        finally {
+        } finally {
             // close StreamReader
             if (sr != null) sr.Close();
         }
