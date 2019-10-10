@@ -3,10 +3,6 @@ using System.Collections;
 using System.Linq;
 using System.IO;
 
-// TO DO:
-// - exception handling when wrong input format
-// - handle files not existing
-
 namespace DocumentMerger2 {
     class Program {
 
