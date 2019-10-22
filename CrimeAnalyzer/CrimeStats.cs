@@ -2,8 +2,7 @@ using System;
 using System.Collections.Generic;
 
 class CrimeStats
-{   // Year,Population,Violent Crime,Murder,Rape,Robbery,Aggravated Assault,Property Crime,Burglary,Theft,Motor Vehicle Theft
-
+{
     IDictionary<string, int> stats = new Dictionary<string, int>();
 
     public CrimeStats(string[] headers, int[] data)
