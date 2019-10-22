@@ -1,8 +1,8 @@
 ﻿using System;
 using System.IO;
 using System.Collections;
-using System.Linq;
 using System.Collections.Generic;
+using System.Linq;
 
 // TO DO
 // stream reader csv exception handling
@@ -46,20 +46,8 @@ namespace CrimeAnalyzer
                     reader.Close();
                 }
 
-                // LINQ queries
-                IEnumerable<CrimeStats> query = from CrimeStats d in data
-                                                where d.getStats()["Rape"] > 90000
-                                                select d;
-
-                foreach (CrimeStats i in query)
-                {
-                    IDictionary<string, int> x = i.getStats();
-                    foreach (var y in x)
-                    {
-                        Console.WriteLine(y);
-                    }
-                    Console.WriteLine("\n");
-                }
+                // init report obj for output
+                Report report = new Report(data);
             } 
             else
             {
