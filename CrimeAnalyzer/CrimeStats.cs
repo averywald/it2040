@@ -15,23 +15,24 @@ class CrimeStats
                 // add each key-value pair to stats dictionary
                 this.stats.Add(new KeyValuePair<string, int>(headers[i], data[i]));
             }
-        } else 
+        } 
+        else 
         {
             Console.WriteLine("Error: Missing or extra data / headers");
         }
     }
 
-    public IDictionary<string, int> getStats()
+    public IDictionary<string, int> GetStats()
     {
         return this.stats;
     }
 
-    public int getYear()
+    public int GetYear()
     {
         return this.stats["Year"];
     }
 
-    public int query(string key)
+    public int Query(string key)
     {
         return this.stats[key];
     }

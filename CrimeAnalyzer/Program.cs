@@ -1,13 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-
-// TO DO
-// stream reader csv exception handling
-// LINQ query implementation
-// output report file implementation
 
 namespace CrimeAnalyzer
 {
@@ -24,30 +17,51 @@ namespace CrimeAnalyzer
                 // create new read stream of file in run command
                 using (var reader = new StreamReader(args[0]))
                 {
-                    // read first line (CSV header line)
-                    var l = reader.ReadLine();
-                    // separate values within line into array
-                    String[] headers = l.Split(',');
-
-                    // read in whole file
-                    while (!reader.EndOfStream)
+                    try
                     {
-                        // read line of data per year
-                        var line = reader.ReadLine();
-                        // convert parsed data fields from string to int
-                        int[] converted = Array.ConvertAll(line.Split(','), element =>
+                        // read first line (CSV header line)
+                        var l = reader.ReadLine();
+                        // separate values within line into array
+                        String[] headers = l.Split(',');
+                        // line counter
+                        int count = 1;
+
+                        // read in whole file
+                        while (!reader.EndOfStream)
                         {
-                            return int.Parse(element);
-                        });
-                        // add separate values into a CrimeStats instance
-                        data.Add(new CrimeStats(headers, converted));
+                            // read line of data per year
+                            var line = reader.ReadLine();
+                            // increment line counter
+                            count++;
+                            // convert parsed data fields from string to int
+                            int[] converted = Array.ConvertAll(line.Split(','), element =>
+                            {
+                                return int.Parse(element);
+                            });
+                            // check for missing data and omit line if so
+                            if (converted.Length != headers.Length)
+                            {
+                                Console.WriteLine(
+                                    "Error: Row {0} has {1} values when it should have {2}", 
+                                    count, converted.Length, headers.Length
+                                );
+                            }
+                            else {
+                                // add separate values into a CrimeStats instance
+                                data.Add(new CrimeStats(headers, converted));
+                            }
+                        }
                     }
-
-                    reader.Close();
-                }
-
+                    catch (FileNotFoundException f) { throw f; }
+                    catch (IOException i) { throw i; }
+                    catch (Exception e) { throw e; }
+                    finally { reader.Close(); }
+                } 
+            
                 // init report obj for output
                 Report report = new Report(data);
+                // output report to specified filename
+                report.Build(args[1]);
             } 
             else
             {
