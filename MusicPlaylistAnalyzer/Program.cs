@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace MusicPlaylistAnalyzer {
@@ -14,7 +15,7 @@ namespace MusicPlaylistAnalyzer {
             // collect songs
             List<Song> songs = new List<Song>();
 
-            using (var sr = new StreamReader("SampleMusicPlaylist.txt")) {
+            using (var sr = new StreamReader("SampleMusicPlaylist.csv")) {
 
                 try {
 
@@ -50,18 +51,13 @@ namespace MusicPlaylistAnalyzer {
 
             }
 
-            // Console.WriteLine(songs.songs);
-
+            // TODO: turn this into user input function????
             // check for output file argument
             string outputFile = "default.txt";
             if (args.Length >= 1) outputFile = args[0];
 
-            foreach (var i in songs[10].GetInfo()) {
-                Console.WriteLine(i);
-            }
-
             // generate report
-            // var r = new Report(songs, outputFile);
+            var r = new Report(songs, outputFile);
         }
     }
 }
