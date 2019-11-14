@@ -1,14 +1,15 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
 
 class Report {
     // build report and output to file
 
     private string outputFile;
-    private Playlist songs;
+    private List<Song> songs;
 
-    public Report(Playlist p, string o) {
+    public Report(List<Song> p, string o) {
         this.songs = p;
 
         if (o.Contains(".txt")) this.outputFile = o;

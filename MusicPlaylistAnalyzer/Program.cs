@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace MusicPlaylistAnalyzer {
     class Program {
@@ -10,36 +11,35 @@ namespace MusicPlaylistAnalyzer {
                 Console.WriteLine("\nYou entered at least one extra argument, which is fine, but won't do anything");
             }
 
-            using (var sr = new StreamReader("SampleMusicPlaylist.txt")) {
-                try {
-                    // get number of headers
-                    var headers = sr.ReadLine().Split('\t').Length;
+            // collect songs
+            List<Song> songs = new List<Song>();
 
-                    // init playlist to collect song objs
-                    Playlist p = new Playlist();
+            using (var sr = new StreamReader("SampleMusicPlaylist.txt")) {
+
+                try {
+
+                    // get number of headers
+                    var l = sr.ReadLine();
+                    var headers = l.Split('\t');
+                    int headerCount = headers.Length;
 
                     // read in rest of file
-                    // while (!sr.EndOfStream) {
-                        // read lines into playlist obj of song objects
-                        // split values by tabs
-                        var values = sr.ReadLine().Split('\t');
-
+                    do {
+                        // read in each line's values
+                        var line = sr.ReadLine();
+                        var values = line.Split('\t');
                         // add data to song obj
                         var s = new Song(values, headers);
-                        
-                    // }
-                    
-                } catch (Exception e) {
-                    Console.WriteLine("\nThe following error has occurred:\n{0}", e);
+                        // add song obj to playlist
+                        songs.Add(s);
+                    } while (!sr.EndOfStream);
 
-                    // Playlist data file can’t be opened.
-                    if (e is FileNotFoundException) {
-                        
-                    }
+                } catch (Exception e) {
+
+                    throw e;
                     
                     // Error occurs reading lines from playlist data file.
                     
-
                     // Record doesn’t contain the correct number of data elements.
                     // Record contains data that is not of the right type.Note: Some data elements are strings and some are integers.
                     // Report file can’t be opened or written to.
@@ -47,14 +47,21 @@ namespace MusicPlaylistAnalyzer {
                     // $"Row {lineNumber} contains {values.Length} values. It should contain {NumItemsInRow}."
 
                 } finally { sr.Close(); }
+
             }
-            
+
+            // Console.WriteLine(songs.songs);
+
             // check for output file argument
-            string outputFile = "Default.txt";
+            string outputFile = "default.txt";
             if (args.Length >= 1) outputFile = args[0];
 
+            foreach (var i in songs[10].GetInfo()) {
+                Console.WriteLine(i);
+            }
+
             // generate report
-            // var r = new Report(p, outputFile);
+            // var r = new Report(songs, outputFile);
         }
     }
 }
