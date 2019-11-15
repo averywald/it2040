@@ -46,46 +46,49 @@ class Report {
         // What is the longest song? (longest in Time)
         // get max value
         var max = songs.Max(s => Int32.Parse(s.GetInfo()["Time"]));
-        Console.WriteLine(max);
         // get Song obj data matching max value
         var q = songs.First(s => Int32.Parse(s.GetInfo()["Time"]) == max).GetInfo();
-        foreach (var i in q) { Console.WriteLine(i); }
-        // create wrapper IEnum to hold the Song data Dict
-        IEnumerable<Dictionary<string, string>> wrapper = new List<Dictionary<string, string>>();
-        // add data to wrapper
-        wrapper.Append(q);
-        // add wrapper IEnum to returnable list
-        queries.Add("\nLongest song in the Playlist:\n", wrapper);
+        // add query wrapped in List obj to returnable dict
+        queries.Add("\nLongest song in the Playlist:\n", new List<Dictionary<string, string>> { q });
 
         return queries;
     }
 
     // format LINQ results into txt file and export to filename
     public void Export(Dictionary<string, IEnumerable<Dictionary<string, string>>> q, string f) {
-        // clean format????
-        // for (int i = 0; i < q.Count; i++) {
-        //     var x = q.ElementAt(i);
-        //     Console.WriteLine(x.Key);
-        //     foreach (var y in x.Value) {
-        //         foreach (var z in y)
-        //         {
-        //             Console.WriteLine(z);
-        //         }
-        //     }
-        // }
-
-
         // export to filename
-        // using (var sw = new StreamWriter(f)) {
-        //     try {
-
-        //     }
-        //     catch (Exception e) {
-        //         throw e;
-        //     }
-        //     finally {
-        //         sw.Close();
-        //     }
-        // }
+        using (var sw = new StreamWriter(f)) {
+            try {
+                for (int i = 0; i < q.Count; i++) {
+                    // x = query result collections
+                    var x = q.ElementAt(i);
+                    sw.Write(x.Key);
+                    if (i == 1 || i ==2 ) {
+                        int count = 0;
+                        // y = dictionaries in collections
+                        foreach (var y in x.Value) {
+                            // get count of dictionaries
+                            count++;
+                        }
+                        sw.Write("{0}\n", count);
+                    } else {
+                        // y = dictionaries in collections
+                        foreach (var y in x.Value) {
+                            // z = key value pairs in dictionaries
+                            foreach (var z in y) {
+                                if (z.Key != "Name") sw.WriteLine("\t{0}", z);
+                                else sw.WriteLine(z);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e) {
+                throw e;
+            }
+            finally {
+                sw.Close();
+            }
+        }
     }
 }
