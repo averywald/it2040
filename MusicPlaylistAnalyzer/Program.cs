@@ -7,15 +7,22 @@ namespace MusicPlaylistAnalyzer {
     class Program {
         static void Main(string[] args) {
 
+            // container for CLI arguments
+            List<string> inputs = new List<string>();
             // check for extra arguments
             if (args.Length > 1) {
-                Console.WriteLine("\nYou entered at least one extra argument, which is fine, but won't do anything");
+                // start at extra arguments
+               for (int i = 1; i < args.Length; i++) {
+                   // push args to input list
+                   inputs.Add(args[i]);
+               }
             }
 
             // collect songs
             List<Song> songs = new List<Song>();
 
-            using (var sr = new StreamReader("SampleMusicPlaylist.csv")) {
+            // read in data file
+            using (var sr = new StreamReader(args[0])) {
 
                 try {
 
@@ -51,10 +58,24 @@ namespace MusicPlaylistAnalyzer {
 
             }
 
-            // TODO: turn this into user input function????
-            // check for output file argument
+
+            // default output file name
             string outputFile = "default.txt";
-            if (args.Length >= 1) outputFile = args[0];
+            // check for output file name argument
+            if (args.Length > 1) {
+                // use output file argument if provided
+                outputFile = args[2];
+            } else {
+                // prompt user to name their output file
+                Console.WriteLine("\nSpecify the name of your output file (default: 'default.txt')");
+                // store input
+                string input = Console.ReadLine();
+                // if user skips naming
+                if (input.Length != 0) {
+                    // keep default file name
+                    outputFile = input;
+                }
+            }
 
             // generate report
             var r = new Report(songs, outputFile);
